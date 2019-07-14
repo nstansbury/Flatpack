@@ -10,11 +10,11 @@ The command line
 
 Create an app package
 
-	"node ./build/cli/flatpack.js --pack ./src --dest ./build/package.app"
+	"node ./build/dist/flatpack-cli.js --pack ./src --dest ./build/package.app"
 
 Unpack a single target file from the app package
 
-	"node ./build/cli/flatpack.js --unpack ./build/package.app --file targetFile --dest ./build/targetFile
+	"node ./build/dist/flatpack-cli.js --unpack ./build/package.app --file targetFile --dest ./build/targetFile
 
 
 
@@ -23,7 +23,7 @@ The browser
 Place this is the head of your HTML file
 
 	<link data-scope="/package/" href="../build/package.app">
-	<script src="./build/browser/flatpack.js" type="text/javascript"></script>
+	<script src="./build/dist/flatpack.js" type="text/javascript"></script>
 
 Flatpack will install a ServiceWorker and cache the specified app package.
 

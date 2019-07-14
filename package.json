@@ -5,10 +5,10 @@
     "main": "flatpack.js",
     "scripts": {
         "dev": "parcel ./src/index.html --cache-dir ./build/cache --out-dir ./build/make --port 12345",
-        "build-cli": "parcel build ./src/cli.js --global Flatpack --target node --no-cache --no-source-maps --out-file flatpack.js --out-dir ./build/cli",
-        "build-browser": "parcel build ./src/browser.js --target browser --no-cache --no-source-maps --out-file flatpack.js --out-dir ./build/browser",
-        "pack": "node ./build/cli/flatpack.js --pack ./src --dest ./build/flatpack.app",
-        "unpack": "node ./build/cli/flatpack.js --unpack ./build/flatpack.app --file cli.js --dest ./build/cli.out.js"
+        "build-cli": "parcel build ./src/cli.js --global Flatpack --target node --no-cache --no-source-maps --out-file flatpack-cli.js --out-dir ./build/dist",
+        "build-browser": "parcel build ./src/browser.js --target browser --no-cache --no-source-maps --out-file flatpack.js --out-dir ./build/dist",
+        "pack": "node ./build/dist/flatpack-cli.js --pack ./src --dest ./build/flatpack.app",
+        "unpack": "node ./build/dist/flatpack-cli.js --unpack ./build/flatpack.app --file cli.js --dest ./build/cli.out.js"
     },
     "keywords": [],
     "author": "",
